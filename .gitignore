@@ -1,5 +1,13 @@
-node_modules
+node_modules/
+**/node_modules/
+
 .env
-dist
-build
+**/.env
+
+dist/
+**/dist/
+build/
+**/build/
+
 npm-debug.log*
+*.log
