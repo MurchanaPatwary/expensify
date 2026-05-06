@@ -9,9 +9,16 @@ dotenv.config();
 
 const app = express();
 const port = process.env.PORT || 5000;
-const clientUrl = process.env.CLIENT_URL || 'https://expensify-iota.vercel.app/';
+const clientUrl = 'https://https://expensify-iota.vercel.app';
 
-app.use(cors({ origin: clientUrl }));
+app.use(cors({
+  origin: [
+      'http://localhost:5173',        // local dev
+      'https://expensify-iota.vercel.app'     // production frontend URL
+  ],
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  credentials: true
+}));
 app.use(express.json());
 
 app.get('/api/health', (_req, res) => {
