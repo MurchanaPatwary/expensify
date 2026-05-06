@@ -1,0 +1,21 @@
+{
+  "name": "expenscoonie-server",
+  "version": "1.0.0",
+  "description": "Express and PostgreSQL API for the Expenscoonie expense app.",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "import:mongo": "node scripts/importMongoTrips.js",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "pg": "^8.13.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
