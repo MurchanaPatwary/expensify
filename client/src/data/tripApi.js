@@ -1,4 +1,4 @@
-const API_BASE_URL = "https://expensify-3gzf.onrender.com/api"
+const API_BASE_URL = import.meta.env.VITE_API_URL || 'https://expensify-3gzf.onrender.com/api';
 
 async function request(path, options = {}) {
   const response = await fetch(`${API_BASE_URL}${path}`, {
